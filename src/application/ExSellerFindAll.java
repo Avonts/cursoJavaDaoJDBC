@@ -1,6 +1,5 @@
 package application;
 
-import java.util.Date;
 import java.util.List;
 
 import model.dao.DaoFactory;
@@ -8,11 +7,11 @@ import model.dao.SellerDao;
 import model.entities.Department;
 import model.entities.Seller;
 
-public class ExUpdate {
+public class ExSellerFindAll {
 
 	public static void main(String[] args) {
 		
-SellerDao sellerDao = DaoFactory.createSellerDao();
+		SellerDao sellerDao = DaoFactory.createSellerDao();
 		
 		System.out.println("=== TEST 1: Seller FindByID ===");
 		Seller seller = sellerDao.findById(2);
@@ -29,17 +28,6 @@ SellerDao sellerDao = DaoFactory.createSellerDao();
 		
 		list2.forEach(System.out::println);
 		
-		System.out.println("\n=== TEST 4: Seller Insert ===");
-		Seller newSeller = new Seller(null, "Greg", "greg@gmail.com", new Date(), 4000.0, dep);
-		sellerDao.insert(newSeller);
-		System.out.println("Inserted! New Id: " + newSeller.getId());
-		
-		System.out.println("\n=== TEST 5: Seller Update ===");
-		seller = sellerDao.findById(1);
-		seller.setName("Martha Wayne");
-		sellerDao.update(seller);
-		System.out.println("Update completed!");
-
 	}
 
 }

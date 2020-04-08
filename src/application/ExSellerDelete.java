@@ -9,11 +9,11 @@ import model.dao.SellerDao;
 import model.entities.Department;
 import model.entities.Seller;
 
-public class ExDelete {
+public class ExSellerDelete {
 
 	public static void main(String[] args) {
 		
-SellerDao sellerDao = DaoFactory.createSellerDao();
+		SellerDao sellerDao = DaoFactory.createSellerDao();
 		
 		Scanner sc = new Scanner(System.in);
 
